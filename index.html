@@ -43,7 +43,7 @@
 			});
 		}
 		$.loadScript("experiments/chesstrainer/script.js", function(){
-			loadboard("experiments/chesstrainer/scandinavian.chess", "black");
+			loadboard("experiments/chesstrainer/dragon_accelerated.chess", "black");
 			console.log(board);
 		});	
 	}
@@ -110,6 +110,7 @@
 	<button onclick="loadGame('experiments/chesstrainer/scandinavian.chess', 'black')">Load Scandinavian</button>
 	<button onclick="loadGame('experiments/chesstrainer/najdorf.chess', 'black')">Load Najdorf</button>
 	<button onclick="loadGame('experiments/chesstrainer/scotch.chess', 'white')">Load Scotch</button>
+	<button onclick="loadGame('experiments/chesstrainer/dragon_accelerated.chess', 'black')">Load Accelerated Dragon</button>
 	<div>
 		This tool was made for training defenses. You are supposed to respond theorically to an attack from the whites. All the possible attacks and responses are stored in a <code>.chess</code> extension. Feel free to create new ones and send it to me.
 	</div>
