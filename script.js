@@ -386,6 +386,10 @@ function parseMove(move) {
 			return ["e"+line+"-"+"c"+line, "a"+line+"-"+"d"+line]; // king & rook
 		}
 	}
+	
+	else if(move[0] == 'p') {
+		return movePawn(color, move.slice(1), takes)
+	}
 
 	else {
 		// console.log("p");
@@ -424,12 +428,14 @@ function moveRook(color, move, takes) {
 	var combination;
 	for (var i in piece_pos) {
 		if(canRookMove(piece_pos[i], move)){
-			if(move.length == 3) move = move.slice(1);
+			if(move.length == 3)
+				move = move.slice(1);
 			combination = piece_pos[i] + "-" + move;
+			// console.log(combination);
+			return combination;
 		}
 	}
-	// console.log(combination);
-	return combination;
+	return;
 }
 
 function canRookMove(piece_pos, move) {
