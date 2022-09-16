@@ -67,7 +67,7 @@ function createTree() {
 
 
 	for (const line in splitted_line) {
-		const line_content = splitted_line[line];
+		let line_content = splitted_line[line];
 
 		if (line == 0 || isNullOrWhitespaceOrTabs(line_content) || line_content.search("#") != -1 || line_content.search("<") != -1) continue;
 		line_content = line_content.replace(String.fromCharCode(13), "");
