@@ -76,7 +76,7 @@ function createTree() {
 
 		// if going deeper
 		if (number_tabs > last_number_tabs) {
-			const current_node = tree;
+			let current_node = tree;
 			for (let i = 0; i < number_tabs; ++i) {
 				current_node = current_node.child[index[i]];
 			}
@@ -84,7 +84,7 @@ function createTree() {
 		}
 		// if same depth
 		else if (number_tabs == last_number_tabs) {
-			const current_node = tree;
+			let current_node = tree;
 			for (let i = 0; i < number_tabs; ++i) {
 				current_node = current_node.child[index[i]];
 			}
