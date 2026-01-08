@@ -9,10 +9,10 @@
 	<meta name="keywords" content="Chess, Opening, Engineer, Paul-Elie, Pipelin, Digital, Imaging, Computer, Graphics">
 
 	<title>Paul-Élie Pipelin - Chess Trainer</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 	<link rel="icon" type="image/x-icon" href="kdt60.png">
-	<script type="module" id="chessmodule" src="https://unpkg.com/chessboard-element/bundled/chessboard-element.bundled.js"></script>
+	<script type="module" id="chessmodule" src="https://unpkg.com/chessboard-element?module"></script>
 	<script type="text/javascript">
 		document.getElementById("chessmodule").onload = function () {
 			function loadScript(url, callback) {
@@ -24,8 +24,8 @@
 				document.head.appendChild(s);
 			}
 
-			loadScript("experiments/chesstrainer/script.js", () => {
-				loadboard("experiments/chesstrainer/dragon_accelerated.chess", "black");
+			loadScript("script.js", () => {
+				loadboard("dragon_accelerated.chess", "black");
 				console.log(board);
 			});
 		};
@@ -43,7 +43,7 @@
 		<br>
 		<div class="row">
 			<div class="col-md-5">
-				<chess-board style="width: 90%; min-width: 300px" draggable-pieces move-speed="slow">
+				<chess-board style="width: 90%; min-width: 300px; max-width: 700px" draggable-pieces move-speed="slow">
 				</chess-board>
 			</div>
 			<div class="col-md-7" id="chess_text1">
